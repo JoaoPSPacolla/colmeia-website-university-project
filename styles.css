@@ -5,13 +5,13 @@
 
 /* ---------- Tokens ---------- */
 :root {
-    --ink: #2B2522;
+    --ink: #222b23;
     --muted: rgba(43, 37, 34, .72);
     --primary: #DC4C1A;          /* laranja do texto do logo */
     --orange: #E7842B;           /* laranja médio das listras do logo */
-    --primary-strong: #C23E0F;   /* texto sobre branco/creme e fundo com texto branco (contraste AA) */
+    --primary-strong: #FF6B2D;   /* texto sobre branco/creme e fundo com texto branco (contraste AA) */
     --accent: #EF9616;
-    --cream: #FFF8EF;
+    --cream: #eff2ff;
     --white: #FFFFFF;
     --line: rgba(43, 37, 34, .14);
     --content: 1120px;
@@ -133,7 +133,7 @@ p {
     color: var(--accent);
 }
 .page-hero .eyebrow {
-    color: var(--cream);
+    color: var(----ink);
 }
 .text-link {
     display: inline-flex;
@@ -432,7 +432,7 @@ p {
     background: var(--cream);
 }
 .quote-grid-light .quote figcaption {
-    color: var(--primary-strong);
+    color: var(----ink);
 }
 
 /* Endereço e mapa */
@@ -526,20 +526,24 @@ p {
 }
 
 /* ---------- Páginas internas ---------- */
+
 .page-hero {
     padding-block: 5rem;
-    color: var(--white);
-    background-color: var(--ink);
-    background-image: var(--honeycomb-light), linear-gradient(115deg, var(--ink), var(--primary-strong));
+    color: var(----ink);
+    background-color: #FACC15;
+    background-image:
+        var(--honeycomb-light),
+        linear-gradient(25deg, #FACC15 0%, #FF6B2D 100%);
     background-size: 56px 96px, auto;
 }
+
 .page-hero h1 {
     font-size: clamp(2.8rem, 7vw, 4.7rem);
 }
 .page-hero p:last-child {
     max-width: 660px;
     margin-bottom: 0;
-    color: rgba(255,255,255,.9);
+    color: rgb(0, 0, 0);
     font-size: 1.08rem;
 }
 .prose {
@@ -886,9 +890,7 @@ tbody tr:last-child :is(th, td) {
 /* ---------- Formulário de dúvidas ---------- */
 .contact-form-section {
     padding-block: 5rem;
-    background-color: var(--cream);
-    background-image: var(--honeycomb);
-    background-size: 56px 96px;
+    background: var(--white);
 }
 
 .contact-form-card {
