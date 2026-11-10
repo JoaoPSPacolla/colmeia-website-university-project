@@ -1043,3 +1043,44 @@ tbody tr:last-child :is(th, td) {
         transition: none;
     }
 }
+
+/* ---------- Contato: duas colunas ---------- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;          /* as duas colunas ficam da mesma altura */
+    padding-block: 5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-layout .contact-heading {
+    max-width: none;
+    margin: 0 0 2rem;
+    text-align: left;
+}
+
+.contact-layout .contact-list {
+    flex: 1;                       /* ocupa o espaço que sobra até o fim da coluna */
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;           /* os 4 cartões crescem por igual */
+    max-width: none;
+    margin: 0;
+}
+
+.contact-layout .contact-form-card {
+    max-width: none;
+    margin: 0;
+}
+
+/* Telas menores: formulário vai para baixo */
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        padding-block: 3rem;
+    }
+}
