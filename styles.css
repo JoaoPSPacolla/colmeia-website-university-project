@@ -1084,3 +1084,57 @@ tbody tr:last-child :is(th, td) {
         padding-block: 3rem;
     }
 }
+
+
+/* ---------- Botão "Sou Aluno" na navbar ---------- */
+.site-nav a.nav-button {
+    position: relative;
+    margin-left: 1.2rem;
+    padding: .6rem 1.3rem;
+    border: 2px solid var(--ink);
+    border-radius: 6px;
+    color: var(--ink);
+    font-weight: 700;
+    transition: background-color .2s, color .2s;
+}
+
+/* separador vertical antes do botão */
+.site-nav a.nav-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1.2rem;
+    width: 1px;
+    height: 32px;
+    background: var(--line);
+    transform: translateY(-50%);
+}
+
+.site-nav a.nav-button:hover {
+    color: var(--white);
+    background: var(--ink);
+}
+
+@media (max-width: 760px) {
+    .site-nav a.nav-button {
+        margin: .8rem 0 0;
+        text-align: center;
+        border: 2px solid var(--ink);
+    }
+    .site-nav a.nav-button::before {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-nav a.nav-button {
+        transition: none;
+    }
+}
+
+/* Contato: um pouco mais largo em telas grandes */
+@media (min-width: 1200px) {
+    .contact-layout {
+        width: min(1280px, calc(100% - 1rem));
+    }
+}
